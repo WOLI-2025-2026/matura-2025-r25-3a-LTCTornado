@@ -9,5 +9,14 @@ def czy_palindrom(lines):
             print(line)
 czy_palindrom(lines)    
 
+def kwadraty(lines):
+    ans = []
+    i = 0
+    while i < len(lines)-2:
+        j = 0
+        while j < len(lines[i][j])-2:
+            values = [lines[i][j], lines[i][j+1], lines[i][j+2], lines[i+1][j], lines[i+1][j+1], lines[i+1][j+2], lines[i+2][j], lines[i+2][j+1], lines[i+2][j+2]]
+            if len(set(values)) == 1:
+                ans.append()
 
 file.close()
