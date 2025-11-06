@@ -1,4 +1,5 @@
 # Tomasz Dobrowolski
+import numpy 
 
 file = open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/symbole.txt", "r")  # "r" = read mode
 lines = [line.strip() for line in file.readlines()]
@@ -44,14 +45,13 @@ def translate(lines):
     # systemie dziesietnym po kolei, przechowujac poczatkowa wartosc line w typie touple
     #out := max  porownoje wartosci dzieki zdefiniowaniu ze ma porownywac 0 
     # dzieki temu ze naraz wykonujemy i przypisujemy program do zmiennej out znakiem :=, pod koniec dopisujemy poczatkowa linijke ktora trzymalismy w touple
-translate(lines)
-    
+#translate(lines)
 
-
-
-
-
-
+ # zad 2.4
+ 
+def suma(lines):
+    print(f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}")
+#suma(lines)
 
 file.close()
 
