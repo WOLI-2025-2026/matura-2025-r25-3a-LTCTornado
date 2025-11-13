@@ -31,19 +31,16 @@ def zad2_2(lines):
             j += 1
         i += 1
     if count > 1:
-        return f"{str(count)} {cords}"
+        return f"{count} {cords}\n"
     else:
-        with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_1.txt", "w") as f:
-            f.write(cords)
-        f.close()
-        return
+        return f"{cords}\n"
 
 #print(kwadraty(lines))
 
 #zad 2.3
 
 def zad2_3(lines):    
-    print(f"{(out := max(((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines), key=lambda x: x[0]))[0]} {out[1]}")
+    return (f"{(out := max(((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines), key=lambda x: x[0]))[0]} {out[1]}\n")
     #notatka dla mnie zebym pamietal o co chodzilo bo troche czasu nad tym spedzilem
     #((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines) zamienia kazda linie na liczbe w 
     # systemie dziesietnym po kolei, przechowujac poczatkowa wartosc line w typie touple
@@ -54,20 +51,16 @@ def zad2_3(lines):
  # zad 2.4
  
 def zad2_4(lines):
-    print(f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}")
+    return (f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}\n")
 #suma(lines)
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_1.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_1.txt", "w") as f:
     f.write(zad2_1(lines))
-f.close()
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_2.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_2.txt", "w") as f:
     f.write(zad2_2(lines))
-f.close()
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_3.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_3.txt", "w") as f:
     f.write(zad2_3(lines))
-f.close()
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_4.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_4.txt", "w") as f:
     f.write(zad2_4(lines))
-f.close()
 
 
 file.close()
