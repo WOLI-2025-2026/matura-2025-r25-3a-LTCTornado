@@ -31,16 +31,16 @@ def zad2_2(lines):
             j += 1
         i += 1
     if count > 1:
-        return f"{count} {cords}\n"
+        return f"{count} {cords}"
     else:
-        return f"{cords}\n"
+        return f"{cords}"
 
 #print(kwadraty(lines))
 
 #zad 2.3
 
 def zad2_3(lines):    
-    return (f"{(out := max(((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines), key=lambda x: x[0]))[0]} {out[1]}\n")
+    return (f"{(out := max(((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines), key=lambda x: x[0]))[0]} {out[1]}")
     #notatka dla mnie zebym pamietal o co chodzilo bo troche czasu nad tym spedzilem
     #((int(line.replace('o','0').replace('+','1').replace('*','2'), 3), line) for line in lines) zamienia kazda linie na liczbe w 
     # systemie dziesietnym po kolei, przechowujac poczatkowa wartosc line w typie touple
@@ -51,7 +51,7 @@ def zad2_3(lines):
  # zad 2.4
  
 def zad2_4(lines):
-    return (f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}\n")
+    return (f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}")
 #suma(lines)
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_1.txt", "w") as f:
     f.write(zad2_1(lines))
