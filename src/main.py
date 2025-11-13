@@ -57,16 +57,16 @@ def zad2_4(lines):
     print(f"{(out := sum(int(line.replace('o','0').replace('+','1').replace('*','2'), 3) for line in lines))} {numpy.base_repr(out, 3).replace('0','o').replace('1','+').replace('2','*')}")
 #suma(lines)
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_1.txt", "w") as f:
-    f.write(zad2_1())
+    f.write(zad2_1(lines))
 f.close()
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_2.txt", "w") as f:
-    f.write(zad2_2())
+    f.write(zad2_2(lines))
 f.close()
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_3.txt", "w") as f:
-    f.write(zad2_3())
+    f.write(zad2_3(lines))
 f.close()
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/wynik2_4.txt", "w") as f:
-    f.write(zad2_4())
+    f.write(zad2_4(lines))
 f.close()
 
 
