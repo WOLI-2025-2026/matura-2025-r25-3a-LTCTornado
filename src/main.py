@@ -80,12 +80,10 @@ def zad3_1(lines):
                 nwd = i
                 if nwd > 1:
                     count += 1
-                out += f"{nwd}\n"
                 break
             i -= 1
         j += 1
-    out += f"{count}"
-    return out
+    return str(count)
 
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_1.txt", "w") as f:
         f.write(zad3_1(lines))   
@@ -105,7 +103,7 @@ def zad3_2a(lines):
             count += 1
     return f"{count}"
 
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2a.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2_a.txt", "w") as f:
         f.write(zad3_2a(lines))  
     
 # zad 3.2b
@@ -124,10 +122,10 @@ def zad3_2b(lines):
     for i in range(len(cords_a)):
         for j in range(i+1,len(cords_a)):
             cords = f"{int(abs((cords_a[i] + cords_a[j])/2))} {int(abs((cords_b[i] + cords_b[j])/2))}"
-            print(f"{cords_a[i]} {cords_b[i]}")
             if cords in cords_ab:
                 return f"({cords_a[i]} {cords_b[i]}) ({cords}) ({cords_a[j]} {cords_b[j]})"
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2b.txt", "w") as f:
+            
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2_b.txt", "w") as f:
     f.write(zad3_2b(lines))  
     
     
