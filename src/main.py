@@ -125,7 +125,7 @@ def zad3_2b(lines):
             if cords in cords_ab:
                 return f"({cords_a[i]} {cords_b[i]}) ({cords}) ({cords_a[j]} {cords_b[j]})"
             
-with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2_b.txt", "w") as f:
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3__2b.txt", "w") as f:
     f.write(zad3_2b(lines))  
     
     
