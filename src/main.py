@@ -1,7 +1,7 @@
 # Tomasz Dobrowolski
 import numpy 
 
-file = open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/symbole.txt", "r")  # "r" = read mode
+file = open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/symbole.txt", "r")
 lines = [line.strip() for line in file.readlines()]
 
 # zad 2.1
@@ -62,6 +62,41 @@ with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_3.txt", "w") as 
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik2_4.txt", "w") as f:
     f.write(zad2_4(lines))
 
+file.close()
 
+# zad 3.1
+file = open("/workspaces/matura-2025-r25-3a-LTCTornado/zalaczniki-2025/dron.txt", "r")
+lines = [line.strip() for line in file.readlines()]
+    
+def zad3_1(lines):
+    #NWD
+    out = ""
+    count = 0
+    for j in range(-1,len(lines),1):
+        a = abs(int(lines[j].split()[0]))
+        b = abs(int(lines[j].split()[1]))
+        for i in range(min(a,b),0,-1):
+            if a % i == 0 and b % i == 0:
+                nwd = i
+                if nwd > 1:
+                    count += 1
+                out += f"{nwd}\n"
+                break
+            i -= 1
+        j += 1
+    out += f"{count}"
+    return out
+
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_1.txt", "w") as f:
+        f.write(zad3_1(lines))   
+        
+        
+# zad 3.2 
+def zad3_2():
+    pass
+    
+    
+    
+    
 file.close()
 
