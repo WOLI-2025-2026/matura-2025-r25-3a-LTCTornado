@@ -91,7 +91,7 @@ with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_1.txt", "w") as 
         f.write(zad3_1(lines))   
         
         
-# zad 3.2 
+# zad 3.2a 
 def zad3_2a(lines):
     cord_a = 0
     cord_b = 0
@@ -104,10 +104,31 @@ def zad3_2a(lines):
         if 5000 > cord_a > 0 and 5000 > cord_b > 0:
             count += 1
     return f"{count}"
+
 with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2a.txt", "w") as f:
         f.write(zad3_2a(lines))  
     
-    
+# zad 3.2b
+def zad3_2b(lines):
+    cord_a = 0
+    cord_b = 0
+    cords_a = []
+    cords_b = []
+    cords_ab = ""
+    for j in range(0,len(lines),1):
+        cord_a += int(lines[j].split()[0])
+        cord_b += int(lines[j].split()[1])
+        cords_a.append(cord_a)
+        cords_b.append(cord_b)
+        cords_ab += f"{cord_a} {cord_b}\n"
+    for i in range(len(cords_a)):
+        for j in range(i+1,len(cords_a)):
+            cords = f"{int(abs((cords_a[i] + cords_a[j])/2))} {int(abs((cords_b[i] + cords_b[j])/2))}"
+            print(f"{cords_a[i]} {cords_b[i]}")
+            if cords in cords_ab:
+                return f"({cords_a[i]} {cords_b[i]}) ({cords}) ({cords_a[j]} {cords_b[j]})"
+with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_2b.txt", "w") as f:
+    f.write(zad3_2b(lines))  
     
     
 file.close()
