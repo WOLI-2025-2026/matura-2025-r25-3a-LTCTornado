@@ -93,16 +93,14 @@ with open("/workspaces/matura-2025-r25-3a-LTCTornado/src/wynik3_1.txt", "w") as 
         
 # zad 3.2 
 def zad3_2a(lines):
-    cord_a = int(lines[0].split()[0])
-    cord_b = int(lines[0].split()[1])
-    print(cord_a, cord_b)
+    cord_a = 0
+    cord_b = 0
     count = 0
-    for j in range(-1,len(lines),1):
+    for j in range(0,len(lines),1):
         a = int(lines[j].split()[0])
         b = int(lines[j].split()[1])
         cord_a += a
         cord_b += b
-        print(cord_a, cord_b)
         if 5000 > cord_a > 0 and 5000 > cord_b > 0:
             count += 1
     return f"{count}"
